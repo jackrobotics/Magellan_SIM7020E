@@ -93,13 +93,16 @@ Released for private usage
 
 #elif defined(ARDUINO_ESP32_DEV) ||(ARDUINO_ARCH_ESP32)
  	#define isHwReset 1
- 	#define hwResetPin 26
+ 	//#define hwResetPin 26
+ 	#define hwResetPin 32
 	#define isATReset 1
 	#define isNetLight 0
 
 	#define serialConfig 1
-	#define rxPin 16
-	#define txPin 17
+	//#define rxPin 16
+	//#define txPin 17
+	#define rxPin 27
+	#define txPin 26
 	#define configParam SERIAL_8N1
 
 	//Serial configuration
