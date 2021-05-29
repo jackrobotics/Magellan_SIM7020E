@@ -401,7 +401,7 @@ String AT_SIM7020E::getIMSI(){
   while(1){
     if(_Serial->available()){
       data_input=_Serial->readStringUntil('\n');
-      if(data_input.indexOf(F("OK"))!=-1 && imsi.indexOf(F("52003"))!=-1) break;
+      if(data_input.indexOf(F("OK"))!=-1 && imsi.indexOf(F("5200"))!=-1) break;
       else if(data_input.indexOf(F("ERROR"))!=-1) _Serial->println(F("AT+CIMI"));
       else imsi+=data_input;
     }
